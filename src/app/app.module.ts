@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { EventCreateComponent } from './event-create/event-create.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { EventDetailsComponent } from './event-details/event-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     EventCreateComponent,
+    EventDetailsComponent,
     HeaderComponent,
     FooterComponent
   ],

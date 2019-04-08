@@ -1,0 +1,20 @@
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card-box">
+        <div class="card-title">
+          <h2>Edit Event </h2>
+
+          <div>Name: {{event?.name}}</div>
+          <div>Session: {{event?.session}}</div>
+          <div>City: {{event?.city}}</div>
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

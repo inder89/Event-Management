@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Capability } from 'protractor';
+
 import { DataService } from '../data.service';
 
 @Component({
