@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from '../data.service';
+import { DataService } from '../shared/data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,12 @@ import { ActivatedRoute, Router } from '@angular/router';
     `
       .container {
         padding: 80px;
+      }
+      .card-title > * {
+        margin: 20px 0;
+      }
+      .card-title .btn-danger {
+        margin-left: 25px;
       }
     `
   ]

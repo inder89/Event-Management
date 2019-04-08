@@ -9,6 +9,8 @@ import { EventCreateComponent } from './event-create/event-create.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
+import { DataService } from './shared/data.service';
+import { EventListResolver } from './events-list.resolver.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { EventDetailsComponent } from './event-details/event-details.component';
     FooterComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [DataService, EventListResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
