@@ -2,7 +2,7 @@ export interface IEvent {
   id: number;
   name: string;
   session: {
-    date: string;
+    date: Date;
     time: string;
   };
   city: string;

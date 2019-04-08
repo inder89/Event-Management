@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
 import { ActivatedRoute } from '@angular/router';
+import { IEvent } from '../shared/index';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  events: any;
+  events: IEvent[];
   selectedEvent;
 
   constructor(public dataService: DataService, public route: ActivatedRoute) {}
