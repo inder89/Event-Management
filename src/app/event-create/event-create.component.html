@@ -1,0 +1,36 @@
+<div class="container" style="margin-top: 70px;">
+
+  <div class="row">
+
+    <div class="col-sm-8 offset-sm-2">
+
+      <div>
+        <form>
+          <div class="form-group">
+            <label for="id">Event ID</label>
+            <input [(ngModel)]="event.id" type="text" name="id" class="form-control" id="id" aria-describedby="idHelp"
+              placeholder="Enter Event ID">
+            <small id="idHelp" class="form-text text-muted">Enter new event ID</small>
+
+            <label for="name">Event Name</label>
+            <input [(ngModel)]="event.name" type="text" name="name" class="form-control" id="name"
+              aria-describedby="nameHelp" placeholder="Enter event name">
+            <small id="nameHelp" class="form-text text-muted">Enter new event name</small>
+
+            <label for="session">Session</label>
+            <input [(ngModel)]="event.session" type="text" name="session" class="form-control" id="session"
+              aria-describedby="sessionHelp" placeholder="Enter session details">
+            <small id="nameHelp" class="form-text text-muted">Enter new session details</small>
+
+            <label for="city">City</label>
+            <input [(ngModel)]="event.city" name="city" class="form-control" id="city" aria-describedby="locationHelp">
+
+            <small id="descHelp" class="form-text text-muted">Enter new event's location</small>
+
+          </div>
+        </form>
+        <button class="btn btn-primary" (click)="createEvent()">Create event</button>
+      </div>
+    </div>
+  </div>
+</div>
