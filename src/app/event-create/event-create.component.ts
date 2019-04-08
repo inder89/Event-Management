@@ -8,21 +8,23 @@ import { DataService } from '../shared/data.service';
   styleUrls: ['./event-create.component.css']
 })
 export class EventCreateComponent implements OnInit {
-  event: { id; name; session; city; temperature } = {
+  event: { id; name; session; city } = {
     id: null,
     name: '',
     session: '',
-    city: '',
-    temperature: ''
+    city: ''
   };
 
   constructor(public dataService: DataService) {}
 
   ngOnInit() {}
 
-  createEvent() {
-    console.log(this.event);
-    this.dataService.createEvent(this.event);
-    this.event = { id: null, name: '', session: '', city: '', temperature: '' };
+  createEvent(formValues) {
+    // console.log(this.event);
+    // console.log(formValues);
+
+    this.dataService.createEvent(formValues);
+
+    this.event = { id: null, name: '', session: '', city: '' };
   }
 }

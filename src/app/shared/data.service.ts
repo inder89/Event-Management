@@ -21,7 +21,7 @@ export class DataService {
     return EVENTS.find(event => event.id === id);
   }
 
-  public createEvent(event: { id; name; session; city }) {
+  public createEvent(event: { id: number; name; session; city }) {
     EVENTS.push(event);
   }
 }

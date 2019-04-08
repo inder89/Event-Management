@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.events = this.route.snapshot.data['events'];
+    console.log(this.events);
   }
 
   public selectEvent(event) {
