@@ -1,25 +1,3 @@
-<!-- <div class="container">
-
-
-  <div class="row">
-    <div class="col-md-8">
-      <div class="card-box">
-        <div class="card-title">
-          <h2>Edit Event </h2>
-          <div>Event ID: {{event?.id}} </div>
-          <div>Event Name: {{event?.name}}</div>
-          <div>Session Time: {{event?.session}} </div>
-          <div>City: {{event?.city}}</div>
-          <button type="submit" class="btn btn-primary">Save</button>
-          <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
- -->
-
 <div class="container">
   <div [hidden]="submitted">
     <h1>Edit Event</h1>
@@ -61,18 +39,7 @@
 
       <button type="submit" class="btn btn-success" (click)="save()" [disabled]="!heroForm.form.valid">Save</button>
       <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
-      <!-- <i>with</i> reset -->
 
-      <!-- &nbsp;&nbsp;
-      <button type="button" class="btn btn-default" (click)="newHero()">New Hero</button>
-      <i>without</i> reset -->
-      <!-- 
-      NOT SHOWN IN DOCS
-      <div>
-        <hr>
-        Name via form.controls = {{showFormControls(heroForm)}}
-      </div> -->
-      <!-- - -->
     </form>
   </div>
 

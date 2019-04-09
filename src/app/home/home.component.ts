@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   city = 'melbourne';
   temperature: any;
   selectedEvent;
+  isDataAvailable = false;
 
   constructor(
     public dataService: DataService,
@@ -23,17 +24,23 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.events = this.route.snapshot.data['events'];
-
     this.weatherService.fetchWeather(this.city).subscribe(data => {
       this.temperature = data;
       console.log(this.temperature);
     });
-
-    // console.log(this.events);
+    console.log(this.events);
   }
 
   public selectEvent(event) {
     this.selectedEvent = event;
-    console.log('SELECETED PROJECT', event);
+    this.city = this.selectedEvent.city;
+
+    this.weatherService.fetchWeather(this.city).subscribe(data => {
+      this.temperature = data;
+    });
+    console.log('After selection', this.temperature);
+    console.log('SELECTED EVENT', this.selectedEvent, this.city);
   }
+
+  public getCity(events) {}
 }

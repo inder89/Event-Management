@@ -8,6 +8,7 @@ import { IEvent } from '../shared/index';
     `
       .container {
         padding: 50px;
+        line-height: 0.5;
       }
       .card-title > * {
         margin: 10px 0;

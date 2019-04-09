@@ -14,7 +14,7 @@
             <!-- <small id="idHelp" class="form-text text-muted">Enter new event ID</small> -->
 
             <label for="name">Event Name</label>
-            <em *ngIf="createForm.controls.name?.invalid && createForm.controls.name?.touched">Required</em>
+            <!-- <em *ngIf="createForm.controls.name?.invalid && createForm.controls.name?.touched">Required</em> -->
             <input [(ngModel)]="event.name" type="text" name="name" class="form-control" id="name"
               aria-describedby="nameHelp" placeholder="Enter event name">
             <!-- <small id="nameHelp" class="form-text text-muted">Enter new event name</small> -->
