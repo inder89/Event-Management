@@ -14,9 +14,11 @@
 
         <td>{{ event.id }}</td>
         <td> {{ event.name }}</td>
-        <td> {{ event.session.date }} <br />{{ event.session.time }}</td>
+        <td> {{ event.session }} </td>
         <td> {{ event.city }}</td>
-        <td> </td>
+        <!-- <td> {{ weatherService.fetchWeather(event.city) }}C </td> -->
+
+        <td> {{ temperature }}C </td>
       </tr>
     </tbody>
   </table>

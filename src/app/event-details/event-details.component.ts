@@ -20,6 +20,8 @@ import { IEvent } from '../shared/index';
 })
 export class EventDetailsComponent {
   event: IEvent;
+  submitted = false;
+
   constructor(
     public dataService: DataService,
     public route: ActivatedRoute,
@@ -31,5 +33,9 @@ export class EventDetailsComponent {
 
   cancel() {
     this.router.navigate(['/home']);
+  }
+
+  onSubmit() {
+    this.submitted = true;
   }
 }

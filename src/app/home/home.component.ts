@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
 import { ActivatedRoute } from '@angular/router';
 import { IEvent } from '../shared/index';
+import { WeatherService } from '../shared/weather.service';
 
 @Component({
   selector: 'app-home',
@@ -10,13 +11,25 @@ import { IEvent } from '../shared/index';
 })
 export class HomeComponent implements OnInit {
   events: IEvent[];
+  city = 'melbourne';
+  temperature: any;
   selectedEvent;
 
-  constructor(public dataService: DataService, public route: ActivatedRoute) {}
+  constructor(
+    public dataService: DataService,
+    public route: ActivatedRoute,
+    public weatherService: WeatherService
+  ) {}
 
   ngOnInit() {
     this.events = this.route.snapshot.data['events'];
-    console.log(this.events);
+
+    this.weatherService.fetchWeather(this.city).subscribe(data => {
+      this.temperature = data;
+      console.log(this.temperature);
+    });
+
+    // console.log(this.events);
   }
 
   public selectEvent(event) {

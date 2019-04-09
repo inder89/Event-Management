@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { DataService } from './shared/data.service';
 import { EventListResolver } from './events-list.resolver.service';
+import { HttpClientModule } from '@angular/common/http';
+import { WeatherService } from './shared/weather.service';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,8 @@ import { EventListResolver } from './events-list.resolver.service';
     HeaderComponent,
     FooterComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [DataService, EventListResolver],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [DataService, EventListResolver, WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

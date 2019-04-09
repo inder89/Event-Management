@@ -30,37 +30,25 @@ const EVENTS: IEvent[] = [
   {
     id: 1,
     name: 'Bowling',
-    session: {
-      date: new Date('03/11/2019'),
-      time: '10:00 AM'
-    },
+    session: '03/11/2019 10:00 AM',
     city: 'Melbourne'
   },
   {
     id: 2,
     name: 'Bingo Night',
-    session: {
-      date: new Date('5/10/2019'),
-      time: '11:00 AM'
-    },
+    session: '5/10/2019 1:00 AM',
     city: 'Sydney'
   },
   {
     id: 3,
     name: 'Cooking Class',
-    session: {
-      date: new Date('8/25/2019'),
-      time: '8:00 AM'
-    },
+    session: '8/25/2019 2:00 AM',
     city: 'Brisbane'
   },
   {
     id: 4,
     name: 'Indoor Climbing',
-    session: {
-      date: new Date('04/12/2019'),
-      time: '9:00 AM'
-    },
+    session: '04/12/2019 9:00 AM',
     city: 'Perth'
   }
 ];
