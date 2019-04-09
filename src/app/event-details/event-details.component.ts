@@ -35,8 +35,13 @@ export class EventDetailsComponent {
     this.router.navigate(['/home']);
   }
 
-  onSubmit(event) {
-    this.submitted = true;
-    console.log('saving project', event);
+  save() {
+    this.router.navigate(['/home']);
   }
+
+  /* onSubmit() {
+    this.submitted = true;
+    this.router.navigate(['/home']);
+    console.log('saving project', event);
+  } */
 }

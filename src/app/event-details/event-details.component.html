@@ -59,7 +59,7 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Save</button>
+      <button type="submit" class="btn btn-success" (click)="save()" [disabled]="!heroForm.form.valid">Save</button>
       <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
       <!-- <i>with</i> reset -->
 
