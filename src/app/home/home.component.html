@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr [routerLink]="['/events', event.id]" *ngFor="let event of events">
+      <tr [routerLink]="['/events', event.id]" (click)="selectEvent(event)" *ngFor="let event of events">
 
         <td>{{ event.id }}</td>
         <td> {{ event.name }}</td>

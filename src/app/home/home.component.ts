@@ -34,5 +34,6 @@ export class HomeComponent implements OnInit {
 
   public selectEvent(event) {
     this.selectedEvent = event;
+    console.log('SELECETED PROJECT', event);
   }
 }

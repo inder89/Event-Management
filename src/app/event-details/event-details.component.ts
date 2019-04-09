@@ -7,10 +7,10 @@ import { IEvent } from '../shared/index';
   styles: [
     `
       .container {
-        padding: 80px;
+        padding: 50px;
       }
       .card-title > * {
-        margin: 20px 0;
+        margin: 10px 0;
       }
       .card-title .btn-danger {
         margin-left: 25px;
@@ -35,7 +35,8 @@ export class EventDetailsComponent {
     this.router.navigate(['/home']);
   }
 
-  onSubmit() {
+  onSubmit(event) {
     this.submitted = true;
+    console.log('saving project', event);
   }
 }

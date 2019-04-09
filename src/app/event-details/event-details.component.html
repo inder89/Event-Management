@@ -23,7 +23,7 @@
 <div class="container">
   <div [hidden]="submitted">
     <h1>Edit Event</h1>
-    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <form #heroForm="ngForm">
 
       <div class="form-group">
         <label for="eventID">Event ID</label>
@@ -60,7 +60,7 @@
       </div>
 
       <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Save</button>
-      <button type="button" class="btn btn-default" (click)="cancel();">Cancel</button>
+      <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
       <!-- <i>with</i> reset -->
 
       <!-- &nbsp;&nbsp;
