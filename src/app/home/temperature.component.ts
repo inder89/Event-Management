@@ -8,8 +8,6 @@ import { WeatherService } from '../shared/weather.service';
   `
 })
 export class TemperatureComponent implements OnChanges {
-  // @Input() events;
-  // cities: string[] = new Array();
   @Input() city: string;
   temperature;
 

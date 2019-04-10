@@ -24,13 +24,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.events = this.route.snapshot.data['events'];
-    /*
-    console.log('cities from get city function', this.cities);
-    for (const city of this.cities) {
-      this.weatherService.fetchWeather(city).subscribe(data => {
-        this.temperature = data;
-      });
-    } */
   }
 
   public selectEvent(event) {
@@ -40,7 +33,5 @@ export class HomeComponent implements OnInit {
     this.weatherService.fetchWeather(this.city).subscribe(data => {
       this.updatedTemp = data;
     });
-    // console.log('After selection', this.temperature);
-    // console.log('SELECTED EVENT', this.selectedEvent, this.city);
   }
 }
