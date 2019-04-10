@@ -20,7 +20,6 @@ export class TemperatureComponent implements OnChanges {
   public getWeather() {
     this.weatherService.fetchWeather(this.city).subscribe(data => {
       this.temperature = data;
-      console.log(this.temperature);
     });
   }
 }

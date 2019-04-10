@@ -3,3 +3,7 @@ em {
   color: #e05c65;
   padding-left: 10px;
 }
+
+.btn.btn-primary {
+  margin-top: 10px;
+}

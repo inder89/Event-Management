@@ -13,8 +13,11 @@ import { IEvent } from '../shared/index';
       .card-title > * {
         margin: 10px 0;
       }
-      .card-title .btn-danger {
-        margin-left: 25px;
+      .btn-danger {
+        margin-left: 15px;
+      }
+      h1 {
+        margin-top: 15px;
       }
     `
   ]
