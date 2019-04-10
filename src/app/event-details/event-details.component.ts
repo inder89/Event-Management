@@ -22,6 +22,7 @@ import { IEvent } from '../shared/index';
 export class EventDetailsComponent {
   event: IEvent;
   submitted = false;
+  code = 'AU';
 
   constructor(
     public dataService: DataService,

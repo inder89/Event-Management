@@ -31,7 +31,7 @@
 
       <div class="form-group">
         <label for="code">Country ISO 3166 Code </label>
-        <input type="text" class="form-control" id="code" required [(ngModel)]="event.city" name="code" #name="ngModel">
+        <input type="text" class="form-control" id="code" required [(ngModel)]="this.code" name="code" #name="ngModel">
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
           Country Code is required
         </div>
