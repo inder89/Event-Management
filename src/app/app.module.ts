@@ -13,6 +13,7 @@ import { DataService } from './shared/data.service';
 import { EventListResolver } from './events-list.resolver.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherService } from './shared/weather.service';
+import { TemperatureComponent } from './home/temperature.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { WeatherService } from './shared/weather.service';
     EventCreateComponent,
     EventDetailsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TemperatureComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [DataService, EventListResolver, WeatherService],

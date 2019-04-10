@@ -11,8 +11,8 @@ import { WeatherService } from '../shared/weather.service';
 })
 export class HomeComponent implements OnInit {
   events: IEvent[];
-  city = 'melbourne';
-  temperature: any;
+  city = '';
+  updatedTemp;
   selectedEvent;
   isDataAvailable = false;
 
@@ -24,11 +24,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.events = this.route.snapshot.data['events'];
-    this.weatherService.fetchWeather(this.city).subscribe(data => {
-      this.temperature = data;
-      console.log(this.temperature);
-    });
-    console.log(this.events);
+    /*
+    console.log('cities from get city function', this.cities);
+    for (const city of this.cities) {
+      this.weatherService.fetchWeather(city).subscribe(data => {
+        this.temperature = data;
+      });
+    } */
   }
 
   public selectEvent(event) {
@@ -36,11 +38,9 @@ export class HomeComponent implements OnInit {
     this.city = this.selectedEvent.city;
 
     this.weatherService.fetchWeather(this.city).subscribe(data => {
-      this.temperature = data;
+      this.updatedTemp = data;
     });
-    console.log('After selection', this.temperature);
-    console.log('SELECTED EVENT', this.selectedEvent, this.city);
+    // console.log('After selection', this.temperature);
+    // console.log('SELECTED EVENT', this.selectedEvent, this.city);
   }
-
-  public getCity(events) {}
 }
